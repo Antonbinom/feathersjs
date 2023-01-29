@@ -50,7 +50,7 @@ app.use(express.errorHandler)
 
 // Создаем новый канал для всех
 app.on('connection', connection => {
-  app.chanel('everybody').join(connection)
+  app.channel('everybody').join(connection)
 })
 // Отображаем все изменения для всех
 app.publish(() => app.channel('everybody'))
